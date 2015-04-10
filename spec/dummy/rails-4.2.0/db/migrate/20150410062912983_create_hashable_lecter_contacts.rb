@@ -5,5 +5,7 @@ class CreateHashableLecterContacts < ActiveRecord::Migration
       t.string :token
       t.timestamps
     end
+
+    add_index :hashable_lecter_contacts, :token
   end
 end

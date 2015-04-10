@@ -5,8 +5,9 @@ copy_file File.expand_path('../../support/database.yml'), "#{ENV['RAILS_ROOT']}/
 rake "db:drop:all"
 rake "db:create:all"
 
-generate "hashable_lecter:install"
 generate :model, 'user email:string'
+generate "hashable_lecter:install"
+generate "hashable_lecter:resource User"
 
 gem_dir = File.expand_path('..',File.dirname(__FILE__))
 
