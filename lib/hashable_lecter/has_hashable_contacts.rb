@@ -5,7 +5,8 @@ module HashableLecter
     included do
       def associated_contacts
         #users that are in your contacts that are also in the app
-        self.class.where('hashed_mobile IN (?)', contacts.map(&:token))
+        contact_tokens = contacts.map(&:token)
+        self.class.where('hashed_mobile IN (?) OR hashed_email IN (?)', contact_tokens, contact_tokens)
       end
     end
 

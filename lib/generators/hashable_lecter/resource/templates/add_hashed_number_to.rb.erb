@@ -2,6 +2,9 @@ class AddHashedNumberTo<%= name.camelize %> < ActiveRecord::Migration
   def change
     add_column <%= ":#{name.underscore.pluralize.to_sym}" %>, :hashed_mobile, :string
     add_index  <%= ":#{name.underscore.pluralize.to_sym}" %>, :hashed_mobile
+    add_column <%= ":#{name.underscore.pluralize.to_sym}" %>, :hashed_email, :string
+    add_index  <%= ":#{name.underscore.pluralize.to_sym}" %>, :hashed_email
+
   end
 end
 
