@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["wp@papercloud.com.au"]
   s.homepage    = "http://papercloud.com"
   s.summary     = "Maintains a hashed list of contacts and friends"
-  s.description = "TODO: Description of HashableLecter."
+  s.description = "Essentially maintains a list of hashed contacts which can include emails and mobiles and stores them on the user"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
